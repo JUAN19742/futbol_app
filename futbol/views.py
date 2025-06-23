@@ -1,15 +1,12 @@
 from django.shortcuts import render
-from .models import Equipo
+
 
 def index(request):
-    return render(request , 'futbol/index.html')
-                   
+    return render(request, 'futbol/index.html')
+
 def equipos(request):
-    lista = Equipo.objects.all()
-    return render(request, 'futbol/equipos.html' , {'equipos':lista})
-                                                    
+    return render(request, 'futbol/equipos.html')
+
 def contacto(request):
-    if request.method == 'POST':
-        return render(request , 'futbol/contacto.html' , { 'mensaje': 'Gracias ␣ por ␣ contactarnos!'})
-    return render( request , 'futbol/contacto.html')
+    return render(request, 'futbol/contacto.html')
 

@@ -1,25 +1,29 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Contacto</title>
+  <title>MiPartido – Contacto</title>
   <link rel="stylesheet" href="{% static 'futbol/style.css' %}">
+  <script defer src="{% static 'futbol/script.js' %}"></script>
 </head>
 <body>
-  <h1>Contáctanos</h1>
-  <form onsubmit="return enviarFormulario();">
-    <label for="nombre">Nombre:</label><br>
-    <input type="text" id="nombre" required><br>
+  <h1 class="titulo-centro">Contáctanos</h1>
 
-    <label for="email">Correo:</label><br>
-    <input type="email" id="email" required><br>
+  <div class="form-container">
+    <form id="form-contacto">
+      <label>Nombre:</label>
+      <input type="text" required>
 
-    <label for="mensaje">Mensaje:</label><br>
-    <textarea id="mensaje" required></textarea><br>
+      <label>Correo:</label>
+      <input type="email" required>
 
-    <button type="submit">Enviar</button>
-  </form>
-  <a href="{% url 'index' %}">Volver al inicio</a>
+      <label>Mensaje:</label>
+      <textarea required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </body>
 </html>

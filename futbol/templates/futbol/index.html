@@ -3,17 +3,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Inicio - Liga Futbolera</title>
+  <title>MiPartido</title>
   <link rel="stylesheet" href="{% static 'futbol/style.css' %}">
   <script defer src="{% static 'futbol/script.js' %}"></script>
 </head>
 <body>
-  <h1>Bienvenido a la Liga Futbolera</h1>
-  <nav>
-    <a href="{% url 'index' %}">Inicio</a>
-    <a href="{% url 'equipos' %}">Equipos</a>
-    <a href="{% url 'contacto' %}">Contacto</a>
-  </nav>
-  <p>¡Conoce todo sobre tu liga de fútbol favorita!</p>
+  <h1 class="titulo-centro">MI PARTIDO</h1>
+
+  <table id="tabla-partidos">
+    <thead>
+      <tr>
+        <th>Equipo A</th>
+        <th></th>
+        <th>Equipo B</th>
+        <th>Resultado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Se llenará dinámicamente -->
+    </tbody>
+  </table>
+
+  <div class="botones-abajo">
+  <a href="{% url 'equipos' %}">
+    <button>Ingresar Partido</button>
+  </a>
+
+  <a href="{% url 'contacto' %}">
+    <button>Contacto</button>
+  </a>
+
+</div>
+
 </body>
 </html>
